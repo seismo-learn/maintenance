@@ -8,7 +8,7 @@
 - 中文名：地震"学"
 - 主页：https://seismo-learn.org
 - 发起人：
-  - [@core-mane](https://github.com/core-man)
+  - [@core-man](https://github.com/core-man)
   - [@seisman](https://github.com/seisman)
 
 ## 域名信息
@@ -39,5 +39,5 @@ DNS使用 [腾讯云](https://cloud.tencent.com/) 进行解析。
 
 - 组织网址：https://github.com/seismo-learn
 - [所有者](https://github.com/orgs/seismo-learn/people?query=role%3Aowner)：
-  - [@core-mane](https://github.com/core-man)
+  - [@core-man](https://github.com/core-man)
   - [@seisman](https://github.com/seisman)
