@@ -7,7 +7,9 @@
 - 英文名：seismo-learn
 - 中文名：地震"学"
 - 主页：https://seismo-learn.org
-- 发起人：[@core-mane](https://github.com/core-man)，[@seisman](https://github.com/seisman)
+- 发起人：
+  - [@core-mane](https://github.com/core-man)
+  - [@seisman](https://github.com/seisman)
 
 ## 域名信息
 
