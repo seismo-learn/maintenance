@@ -31,6 +31,10 @@ DNS使用 [腾讯云](https://cloud.tencent.com/) 进行解析。
 4. 为域名添加 `A` 记录，指定IP地址 `185.199.108.153`
 5. 为域名添加 `www` 记录，指定IP地址 `185.199.108.153`
 
+具体见下图:
+
+![](DNS.png)
+
 ## GitHub 组织
 
 - 组织网址：https://github.com/seismo-learn
