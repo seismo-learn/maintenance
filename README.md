@@ -17,7 +17,7 @@
   - [@seisman](https://github.com/seisman) (购买者)
   - [@core-man](https://github.com/core-man) (已共享账户，可使用身份验证器登录，有完整权限)
 - 有效期：2030-12-05
-- 购买自：https://www.godaddy.com/ [收据](domain-receipt.pdf)
+- 购买自：https://www.godaddy.com/ ([收据](domain-receipt.pdf))
 
 ## DNS信息
 
