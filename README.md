@@ -13,7 +13,9 @@
 
 ## 域名信息
 
-- 所有者：[@seisman](https://github.com/seisman)
+- 所有者：
+  - [@seisman](https://github.com/seisman) (购买者)
+  - [@core-man](https://github.com/core-man) (有管理权限，可修改DNS，不能转移域名或删除域名)
 - 有效期：2030-12-05
 - 购买自：https://www.godaddy.com/
 
