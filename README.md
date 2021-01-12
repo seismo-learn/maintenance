@@ -37,7 +37,7 @@ DNS使用 [腾讯云](https://cloud.tencent.com/) 进行解析。
 
 ![](DNS.png)
 
-生成静态网站并将网站托管到GitHub Pages时，还需要注意如下两点：
+生成静态网站并将网站托管到 GitHub Pages 时，还需要注意如下两点：
 
 1. 要有一个空文件 `.nojekyll` 以免 GitHub 使用 Jekyll 对网站再次渲染
 2. 要有一个 `CNAME` 文件，其中包括当前网站的域名，例如 `seismo-learn.org`
