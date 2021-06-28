@@ -4,8 +4,8 @@
 
 ## 基本信息
 
-- 英文名：seismo-learn
 - 中文名：地震“学”
+- 英文名：seismo-learn
 - 主页：https://seismo-learn.org
 - 发起人：
   - [@core-man](https://github.com/core-man)
