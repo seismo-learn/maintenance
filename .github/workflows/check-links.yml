@@ -1,0 +1,58 @@
+# This workflow checks the links in plaintext and HTML files
+name: Check Links
+
+on:
+  # Uncomment the 'pull_request' line below to trigger the workflow in PR
+  # pull_request:
+  # Schedule runs on 12 noon every Sunday
+  schedule:
+    - cron: '0 12 * * 0'
+
+jobs:
+  check_links:
+    name: Check Links
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the repositories and sites
+      run: |
+        for repo in contributing seismology seismology101 software website links; do
+          git clone --depth 1 --branch main https://github.com/seismo-learn/${repo} seismo-learn/${repo}/repo
+        done
+        for repo in contributing seismology seismology101 software links; do
+          git clone --depth 1 --branch gh-pages https://github.com/seismo-learn/${repo} seismo-learn/${repo}/site
+        done
+        git clone --depth 1 --branch main https://github.com/seismo-learn/seismo-learn.github.io seismo-learn/website/site
+
+    - name: Link Checker
+      uses: lycheeverse/lychee-action@v1.7.0
+      with:
+        # 429: Too many requests
+        args: >
+          --accept 429
+          --scheme http
+          --scheme https
+          --scheme ftp
+          --exclude-all-private
+          --exclude "http://localhost"
+          --exclude "https://fonts.gstatic.com"
+          --exclude "https://pkgs.org"
+          --exclude "https://www.fdsn.org/"
+          --exclude "https://www.hinet.bosai.go.jp"
+          --exclude "https://www.fnet.bosai.go.jp"
+          --exclude "https://apt.repos.intel.com/oneapi"
+          --exclude "https://www.scopus.com/home.uri"
+          --verbose
+          "seismo-learn/*/repo/README.md"
+          "seismo-learn/*/site/**/*.html"
+
+    - name: Get current date
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
+    - name: Create Issue From File
+      uses: peter-evans/create-issue-from-file@v4
+      if: github.event_name != 'pull_request'
+      with:
+        title: Link Checker Report on ${{ steps.date.outputs.date }}
+        content-filepath: ./lychee/out.md
