@@ -42,6 +42,7 @@ jobs:
           --exclude "https://www.fnet.bosai.go.jp"
           --exclude "https://apt.repos.intel.com/oneapi"
           --exclude "https://www.scopus.com/home.uri"
+          --exclude "https://doi.org/*"
           --verbose
           "seismo-learn/*/repo/README.md"
           "seismo-learn/*/site/**/*.html"
