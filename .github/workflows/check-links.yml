@@ -25,11 +25,11 @@ jobs:
         git clone --depth 1 --branch main https://github.com/seismo-learn/seismo-learn.github.io seismo-learn/website/site
 
     - name: Link Checker
-      uses: lycheeverse/lychee-action@v2.5.0
+      uses: lycheeverse/lychee-action@v2.6.1
       with:
         # 429: Too many requests
         args: >
-          --accept 429
+          --accept 200,429
           --scheme http
           --scheme https
           --scheme ftp
